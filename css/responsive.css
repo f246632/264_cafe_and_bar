@@ -1,0 +1,459 @@
+/* ========================================
+   KAFFEE.BAR - Responsive Styles
+   Mobile-First, Fully Responsive Design
+   ======================================== */
+
+/* Tablet Styles (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-images {
+        order: -1;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3rem;
+    }
+
+    /* Navigation */
+    .navbar .container {
+        padding: 0.75rem var(--spacing-sm);
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--bg-white);
+        flex-direction: column;
+        padding: 5rem var(--spacing-md) var(--spacing-md);
+        box-shadow: -5px 0 25px var(--shadow-dark);
+        transition: right var(--transition-medium);
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Hero */
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+
+    /* Sections */
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* About */
+    .about-images {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img-main {
+        height: 300px;
+    }
+
+    .about-img-small {
+        height: 200px;
+    }
+
+    /* Menu */
+    .menu-category {
+        padding: var(--spacing-md);
+    }
+
+    .menu-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Reviews */
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Location */
+    .location-map iframe {
+        min-height: 350px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* Mobile Landscape (max-width: 640px) */
+@media screen and (max-width: 640px) {
+    .hero {
+        height: 100svh; /* Safe area for mobile */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
+    }
+
+    .menu-grid {
+        gap: var(--spacing-md);
+    }
+}
+
+/* Mobile Portrait (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Typography */
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        letter-spacing: 2px;
+    }
+
+    .stars {
+        font-size: 1.2rem;
+    }
+
+    .rating-text {
+        font-size: 0.9rem;
+    }
+
+    /* About */
+    .features {
+        gap: var(--spacing-sm);
+    }
+
+    .feature-item {
+        padding: var(--spacing-sm);
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    /* Menu */
+    .menu-category {
+        padding: var(--spacing-sm);
+    }
+
+    .menu-category-title {
+        font-size: 1.5rem;
+    }
+
+    .menu-item {
+        padding: var(--spacing-sm);
+    }
+
+    .menu-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .menu-price {
+        font-size: 1.1rem;
+    }
+
+    /* Gallery */
+    .gallery-item {
+        aspect-ratio: 1;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .lightbox-close {
+        font-size: 2.5rem;
+    }
+
+    /* Reviews */
+    .review-card {
+        padding: var(--spacing-md);
+    }
+
+    .review-stars {
+        font-size: 1.2rem;
+    }
+
+    .review-text {
+        font-size: 1rem;
+    }
+
+    /* Location */
+    .location-map iframe {
+        min-height: 300px;
+    }
+
+    /* Contact */
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--spacing-md) 0 var(--spacing-sm);
+    }
+
+    .footer-content {
+        gap: var(--spacing-sm);
+    }
+}
+
+/* Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        width: 85%;
+        padding: 4rem var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        gap: 0.25rem;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Landscape Orientation (max-height: 600px) */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 6rem 0 3rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* High DPI Displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    .hero-image img,
+    .about-img-main,
+    .about-img-small,
+    .gallery-item img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* Optional: Add dark mode styles if needed */
+    /* Currently maintaining light theme for cafe aesthetic */
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero-cta,
+    .scroll-indicator,
+    .gallery,
+    .contact-form,
+    .footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    section {
+        page-break-inside: avoid;
+        padding: 1rem 0;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}
+
+/* Focus Visible for Keyboard Navigation */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch device optimizations */
+    .btn {
+        min-height: 44px; /* iOS minimum touch target */
+    }
+
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery-item {
+        touch-action: manipulation;
+    }
+}
+
+/* Hover Effects Only on Non-Touch Devices */
+@media (hover: hover) and (pointer: fine) {
+    /* Standard hover effects (already defined in main CSS) */
+}
+
+@media (hover: none) {
+    /* Disable hover effects on touch devices */
+    .gallery-item:hover img {
+        transform: scale(1);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        opacity: 0;
+    }
+
+    /* Show overlay on touch */
+    .gallery-item:active .gallery-overlay {
+        opacity: 1;
+    }
+}
